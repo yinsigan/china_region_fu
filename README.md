@@ -3,7 +3,7 @@
 # ChinaRegionFu
 
 [![Gem Version](https://badge.fury.io/rb/china_region_fu.png)](http://badge.fury.io/rb/china_region_fu)
-[![Build Status](https://travis-ci.org/Xuhao/china_region_fu.png?branch=master)](https://travis-ci.org/Xuhao/china_region_fu)
+[![Circle CI](https://circleci.com/gh/Xuhao/china_region_fu.svg?style=svg)](https://circleci.com/gh/Xuhao/china_region_fu)
 
 ChinaRegionFu 是一个为Rails应用提供的中国行政区域信息的rubygem。使用ChinaRegionFu后，你将拥有全面且准确的中国区域数据，而且你还可以使用其提供的表单helper，轻松将具有联动效果的区域选择器放入你的表单中。
 
