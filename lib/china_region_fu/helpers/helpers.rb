@@ -12,7 +12,7 @@ module ChinaRegionFu
         output = ActiveSupport::SafeBuffer.new
         names.each_with_index do |name, index|
           if klass = to_class(name)
-            choices = index == 0 ? options_from_collection_for_select(klass.select('id, name'), "id", "name") : ''
+            choices = index == 0 ? options_from_collection_for_select(klass.select('id, name'), "id", "name", options.delete("#{name}_selected".to_sym)) : ''
             next_name = names.at(index + 1)
             set_html_options(nil, name, options, next_name)
 
@@ -25,7 +25,7 @@ module ChinaRegionFu
         output
       else
         if klass = to_class(names)
-          select_tag(names, options_from_collection_for_select(klass.select('id, name'), "id", "name"), options)
+          select_tag(names, options_from_collection_for_select(klass.select('id, name'), "id", "name", options.delete("#{name}_selected".to_sym)), options)
         else
           raise InvalidAttributeError
         end
